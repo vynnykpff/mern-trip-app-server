@@ -1,10 +1,10 @@
-import {AuthService} from '@/auth/auth.service';
-import {UserDTO} from '@/users/dtos/user.dto';
-import {MemoryDatabase} from '@/testing-utils/MemoryDatabase';
-import {AuthException} from '@/auth/auth.exception';
-import {UserToken} from '@/users/models/user-token.model';
-import {testDto} from '@/testing-utils/testDto';
-import {User} from '@/users/models/user.model';
+import { AuthService } from '@/auth/auth.service';
+import { UserDTO } from '@/users/dtos/user.dto';
+import { MemoryDatabase } from '@/testing-utils/MemoryDatabase';
+import { AuthException } from '@/auth/auth.exception';
+import { UserToken } from '@/users/models/user-token.model';
+import { testDto } from '@/testing-utils/testDto';
+import { User } from '@/users/models/user.model';
 
 type AuthResponse = {
 	refreshToken: string;
@@ -19,8 +19,8 @@ const testAuthResponse = async (res: AuthResponse) => {
 	expect(typeof res.refreshToken).toBe('string');
 	expect(Object.keys(res.response)).toEqual(['accessToken', 'user']);
 	testDto(res.response.user, UserDTO);
-	const {user} = res.response;
-	expect(!!(await UserToken.findOne({userId: user.id}))).toBeTruthy();
+	const { user } = res.response;
+	expect(!!(await UserToken.findOne({ userId: user.id }))).toBeTruthy();
 };
 
 describe('AuthService', () => {
@@ -110,7 +110,7 @@ describe('AuthService', () => {
 		it('should delete a token from database', async () => {
 			await AuthService.deleteToken(refreshMock);
 			expect(
-				Boolean(await UserToken.findOne({refreshToken: refreshMock}))
+				Boolean(await UserToken.findOne({ refreshToken: refreshMock }))
 			).toBeFalsy();
 		});
 	});

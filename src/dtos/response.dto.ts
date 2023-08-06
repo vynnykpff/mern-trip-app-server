@@ -1,4 +1,3 @@
 export class ResponseDTO {
-	constructor(public message: string | string[], public statusCode: number) {
-	}
+	constructor(public message: string | string[], public statusCode: number) {}
 }

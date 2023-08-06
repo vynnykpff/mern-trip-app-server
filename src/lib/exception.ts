@@ -1,6 +1,5 @@
 export class Exception {
-	constructor(public message: string | string[], public statusCode: number) {
-	}
+	constructor(public message: string | string[], public statusCode: number) {}
 
 	static UnauthorizedException() {
 		return new Exception('Unauthorized.', 401);

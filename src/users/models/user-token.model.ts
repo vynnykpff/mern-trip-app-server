@@ -1,4 +1,4 @@
-import mongoose, {HydratedDocument, InferSchemaType} from 'mongoose';
+import mongoose, { HydratedDocument, InferSchemaType } from 'mongoose';
 
 export const UserTokenSchema = new mongoose.Schema({
 	refreshToken: {

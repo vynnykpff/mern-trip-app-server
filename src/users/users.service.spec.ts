@@ -3,6 +3,6 @@
 
 describe('UsersService', () => {
 	it('0', () => {
-		expect(true).toBeTruthy()
-	})
+		expect(true).toBeTruthy();
+	});
 });

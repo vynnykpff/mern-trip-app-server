@@ -1,4 +1,4 @@
-import {TypedRequest} from '@/types/TypedRequest';
+import { TypedRequest } from '@/types/TypedRequest';
 
 export type QueryRequest<Query = Record<string, unknown>> = TypedRequest<
 	Record<string, unknown>,

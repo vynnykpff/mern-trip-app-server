@@ -1,5 +1,5 @@
-import {ResponseDTO} from '@/dtos/response.dto';
-import {NextFunction, Request, Response} from 'express';
+import { ResponseDTO } from '@/dtos/response.dto';
+import { NextFunction, Request, Response } from 'express';
 
 export const bodyExceptionMiddleware = (
 	err: SyntaxError | unknown,

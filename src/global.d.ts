@@ -1,4 +1,4 @@
-type Class<T = any> = { new(): T };
+type Class<T = any> = { new (): T };
 
 namespace NodeJS {
 	interface ProcessEnv {

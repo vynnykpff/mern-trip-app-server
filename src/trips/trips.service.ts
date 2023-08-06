@@ -31,7 +31,6 @@ export class TripsService {
 		{ cityName, startDate, endDate }: CreateTripDTO,
 		userId: string
 	) {
-
 		const formattedStartDate = this.formatIncomingTripDate(startDate);
 		const formattedEndDate = this.formatIncomingTripDate(endDate);
 

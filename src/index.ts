@@ -1,21 +1,21 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import {apiRouter} from './routers/apiRouter';
+import { apiRouter } from './routers/apiRouter';
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
-import {bodyExceptionMiddleware} from './middlewares/body-exception.middleware';
+import { bodyExceptionMiddleware } from './middlewares/body-exception.middleware';
 import cors from 'cors';
-import {validateEnvVariables} from './utils/validateEnvVariables';
-import {loggerMiddleware} from '@/middlewares/logger.middleware';
-import {ResponseDTO} from '@/dtos/response.dto';
+import { validateEnvVariables } from './utils/validateEnvVariables';
+import { loggerMiddleware } from '@/middlewares/logger.middleware';
+import { ResponseDTO } from '@/dtos/response.dto';
 
-dotenv.config({path: `.${process.env.NODE_ENV}.env`});
+dotenv.config({ path: `.${process.env.NODE_ENV}.env` });
 validateEnvVariables();
 
 async function bootstrap() {
 	const app = express();
 
-	const {PORT, MONGO_URI, CLIENT_URL, COOKIE_SECRET} = process.env;
+	const { PORT, MONGO_URI, CLIENT_URL, COOKIE_SECRET } = process.env;
 	await mongoose.connect(MONGO_URI);
 
 	app.disable('x-powered-by');
@@ -25,7 +25,7 @@ async function bootstrap() {
 			origin: CLIENT_URL,
 		})
 	);
-	app.use(express.json({limit: '10mb'}));
+	app.use(express.json({ limit: '10mb' }));
 	app.use(cookieParser(COOKIE_SECRET));
 	app.use('/api', apiRouter);
 	app.use(bodyExceptionMiddleware);

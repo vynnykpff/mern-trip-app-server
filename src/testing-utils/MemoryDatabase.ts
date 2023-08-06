@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import {MongoMemoryServer} from 'mongodb-memory-server';
+import { MongoMemoryServer } from 'mongodb-memory-server';
 
 export class MemoryDatabase {
 	private mongoose: typeof mongoose;

@@ -1,6 +1,12 @@
-import {NextFunction, Request, RequestHandler, Response, Router,} from 'express';
-import {isObject} from '@/utils/isObject';
-import {exceptionMiddleware} from '@/middlewares/exception.middleware';
+import {
+	NextFunction,
+	Request,
+	RequestHandler,
+	Response,
+	Router,
+} from 'express';
+import { isObject } from '@/utils/isObject';
+import { exceptionMiddleware } from '@/middlewares/exception.middleware';
 
 type RouterMethods =
 	| 'all'
@@ -17,23 +23,23 @@ export abstract class Controller {
 	static baseUrl? = '/';
 
 	static Get(path: string, ...handlers: RequestHandler[]) {
-		return this.createDecorator('get', {path, handlers});
+		return this.createDecorator('get', { path, handlers });
 	}
 
 	static Post(path: string, ...handlers: RequestHandler[]) {
-		return this.createDecorator('post', {path, handlers});
+		return this.createDecorator('post', { path, handlers });
 	}
 
 	static Delete(path: string, ...handlers: RequestHandler[]) {
-		return this.createDecorator('delete', {path, handlers});
+		return this.createDecorator('delete', { path, handlers });
 	}
 
 	static Patch(path: string, ...handlers: RequestHandler[]) {
-		return this.createDecorator('patch', {path, handlers});
+		return this.createDecorator('patch', { path, handlers });
 	}
 
 	static Put(path: string, ...handlers: RequestHandler[]) {
-		return this.createDecorator('put', {path, handlers});
+		return this.createDecorator('put', { path, handlers });
 	}
 
 	private static wrapper(cb: RequestHandler) {
@@ -63,8 +69,8 @@ export abstract class Controller {
 		method: RouterMethods,
 		params: { path: string; handlers: RequestHandler[] }
 	) {
-		const {router} = this;
-		const {path, handlers} = params;
+		const { router } = this;
+		const { path, handlers } = params;
 
 		return (target, propertyKey: string, descriptor: PropertyDescriptor) => {
 			router[method](

@@ -7,7 +7,7 @@ export const validateEnvVariables = () => {
 		'COOKIE_SECRET',
 		'CLIENT_URL',
 		'NODE_ENV',
-		'CITY_SERVER_URL'
+		'CITY_SERVER_URL',
 	];
 	const notFoundedEnvVariables: string[] = [];
 	for (const env of requiredEnvVariables) {

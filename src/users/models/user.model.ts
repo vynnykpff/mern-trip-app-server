@@ -1,4 +1,4 @@
-import mongoose, {HydratedDocument, InferSchemaType} from 'mongoose';
+import mongoose, { HydratedDocument, InferSchemaType } from 'mongoose';
 import crypto from 'crypto';
 
 export const UserSchema = new mongoose.Schema({
@@ -17,7 +17,8 @@ export const UserSchema = new mongoose.Schema({
 	},
 	avatar: {
 		type: String,
-		default: 'https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png',
+		default:
+			'https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png',
 	},
 	count: {
 		type: Number,

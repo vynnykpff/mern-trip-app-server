@@ -1,5 +1,5 @@
-import {UserDocument} from '@/users/models/user.model';
-import {TypedRequest} from './TypedRequest';
+import { UserDocument } from '@/users/models/user.model';
+import { TypedRequest } from './TypedRequest';
 
 export type UserRequest<
 	B = Record<string, unknown>,

@@ -1,4 +1,4 @@
-import {Request} from 'express';
+import { Request } from 'express';
 
 export type ParamsRequest<
 	Params = Record<string, unknown>,
