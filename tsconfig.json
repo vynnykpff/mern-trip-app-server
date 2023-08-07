@@ -1,27 +1,22 @@
 {
   "compilerOptions": {
+    "removeComments": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"]
     },
-    "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
+    "target": "ES2017",
+    "module": "CommonJS",
     "allowSyntheticDefaultImports": true,
-    "target": "es2017",
-    "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true,
+    "experimentalDecorators": true,
     "skipLibCheck": true,
-    "strictNullChecks": false,
+    "strictPropertyInitialization": false,
     "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "resolveJsonModule": true,
   },
-
   "include": [
     "./src/**/*.ts",
   ],
@@ -30,5 +25,8 @@
     "./dist",
     "./src/testing-utils",
     "**/*.spec*"
-  ]
+  ],
+  "tsc-alias": {
+    "resolveFullPaths": true,
+  }
 }
