@@ -64,5 +64,8 @@
   },
   "_moduleAliases": {
     "@": "./dist"
+  },
+  "imports": {
+    "@/*": "./src/*.js"
   }
 }
