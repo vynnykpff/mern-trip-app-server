@@ -4,8 +4,8 @@
   "description": "Trip app",
   "main": "dist/index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=prod node -r module-alias/register ./dist/index.js",
-    "start:dev": "tsc-watch --project . --onSuccess \"cross-env NODE_ENV=dev node -r module-alias/register ./dist/index.js\"",
+    "start": "cross-env NODE_ENV=prod node ./dist/index.js",
+    "start:dev": "tsc-watch --project . --onSuccess \"cross-env NODE_ENV=dev node ./dist/index.js\"",
     "format": "prettier --write \"src/**/*\"",
     "lint": "eslint -c .eslintrc.js --ext .ts ./src",
     "build": "npm run build:clean && tsc && tsc-alias -p tsconfig.json",
@@ -64,8 +64,5 @@
   },
   "_moduleAliases": {
     "@": "./dist"
-  },
-  "imports": {
-    "@/*": "./src/*"
   }
 }
