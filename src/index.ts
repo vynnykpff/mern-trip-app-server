@@ -1,4 +1,4 @@
-import "./aliases";
+import './aliases';
 import express from 'express';
 import dotenv from 'dotenv';
 import { apiRouter } from './routers/apiRouter';

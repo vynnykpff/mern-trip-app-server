@@ -1,23 +1,27 @@
 {
   "compilerOptions": {
-    "removeComments": true,
-    "strict": true,
-    "esModuleInterop": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"]
     },
-    "target": "ES2017",
-    "module": "CommonJS",
-    "moduleResolution": "Node",
-    "allowSyntheticDefaultImports": true,
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
     "skipLibCheck": true,
-    "strictPropertyInitialization": false,
+    "strictNullChecks": false,
     "noImplicitAny": false,
-    "resolveJsonModule": true,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false
   },
+
   "include": [
     "./src/**/*.ts",
   ],
