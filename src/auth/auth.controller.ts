@@ -19,6 +19,8 @@ export class AuthController extends Controller {
 			httpOnly: true,
 			maxAge: refreshMaxAge,
 			signed: true,
+			secure: true,
+			sameSite: "none",
 		});
 		return response;
 	}
@@ -31,6 +33,8 @@ export class AuthController extends Controller {
 			httpOnly: true,
 			maxAge: refreshMaxAge,
 			signed: true,
+			secure: true,
+			sameSite: "none",
 		});
 		return response;
 	}
@@ -55,6 +59,8 @@ export class AuthController extends Controller {
 			httpOnly: true,
 			maxAge: refreshMaxAge,
 			signed: true,
+			secure: true,
+			sameSite: "none",
 		});
 
 		return { accessToken };
