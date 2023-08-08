@@ -23,8 +23,7 @@ export class TripsService {
 			throw TripsException.InvalidDate();
 		}
 
-		// return date.split('-').join('.');
-		return date;
+		return date.split('-').join('.');
 	}
 
 	static async createTrip(
