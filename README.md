@@ -26,6 +26,10 @@
 - [Jest](https://jestjs.io/)
 - [Axios](https://axios-http.com/)
 
+### Frontend part:
+
+- [Stack](https://github.com/vynnykpff/mern-trip-app-client)
+
 ## **Using**
 
 **If you want to use this project for your own purposes, you should:**
@@ -49,7 +53,7 @@ To install and run the project, you need [NodeJS](https://nodejs.org/).
 To start the `server`, run the command:
 
 ```sh
-npm run dev start:dev
+npm run start:dev
 ```
 
 ### `Build` creation
