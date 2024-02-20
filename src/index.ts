@@ -23,7 +23,7 @@ async function bootstrap() {
 	app.use(
 		cors({
 			credentials: true,
-			origin: CLIENT_URL,
+			origin: '*',
 		})
 	);
 	app.use(express.json({ limit: '10mb' }));
