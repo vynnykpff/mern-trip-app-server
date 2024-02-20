@@ -20,7 +20,7 @@ export class AuthController extends Controller {
 			maxAge: refreshMaxAge,
 			signed: true,
 			secure: true,
-			sameSite: "none",
+			sameSite: 'none',
 		});
 		return response;
 	}
@@ -34,7 +34,7 @@ export class AuthController extends Controller {
 			maxAge: refreshMaxAge,
 			signed: true,
 			secure: true,
-			sameSite: "none",
+			sameSite: 'none',
 		});
 		return response;
 	}
@@ -60,7 +60,7 @@ export class AuthController extends Controller {
 			maxAge: refreshMaxAge,
 			signed: true,
 			secure: true,
-			sameSite: "none",
+			sameSite: 'none',
 		});
 
 		return { accessToken };
